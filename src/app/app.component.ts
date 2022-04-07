@@ -22,5 +22,12 @@ export class AppComponent {
 
   comments = COMMENTS;
   currentUser = CURRENT_USER;
+  comment = '';
+
+  addComment(comment: string): void {
+    if (comment) {
+      this.comments.push(new Comment(this.currentUser, comment));
+    }
+  }
 
 }
