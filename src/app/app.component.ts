@@ -20,6 +20,7 @@ export class AppComponent {
   commentsRef: AngularFireList<Comment>;
   currentUser = CURRENT_USER;
   comment = '';
+  messageBeforeEdit: string = '';
 
   constructor(private db: AngularFireDatabase){
     this.commentsRef = db.list('/comments');
@@ -45,10 +46,21 @@ export class AppComponent {
     const { key, message } = comment;
 
     this.commentsRef.update(key, { message });
+
+    this.messageBeforeEdit = '';
   }
 
   deleteComment(comment: Comment): void {
     this.commentsRef.remove(comment.key);
+  }
+
+  backupMessage(comment: Comment): void {
+    this.messageBeforeEdit = comment.message;
+  }
+
+  undoMessage(comment: Comment): void {
+    comment.message = this.messageBeforeEdit;
+    this.messageBeforeEdit = '';
   }
 
 }
