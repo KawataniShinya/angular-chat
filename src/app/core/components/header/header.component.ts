@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'ac-header',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isLogin: boolean;
+
+  constructor(private afAuth: AngularFireAuth) { }
 
   ngOnInit(): void {
+    this.afAuth.onAuthStateChanged((user: firebase.User) => {
+      this.isLogin = !!user;
+    });
   }
 
 }

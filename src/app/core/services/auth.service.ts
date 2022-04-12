@@ -7,9 +7,7 @@ import * as firebase from 'firebase';
 })
 export class AuthService {
 
-  constructor(private afAuth: AngularFireAuth) {
-    // this.afAuth.onAuthStateChanged(user => console.log(user));
-   }
+  constructor(private afAuth: AngularFireAuth) { }
 
   create(email: string, password: string): Promise<void> {
     return this.afAuth.createUserWithEmailAndPassword(email, password)
