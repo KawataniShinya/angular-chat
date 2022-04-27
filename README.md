@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 
-## Development server
+## Preparation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project use Firebase. You need to create "angular-chat" project, and Authentication, Realtime Database on Firebase to work. Further, you setup environment.ts, so the application can connect Firebase and work.
+
+## Development server (usage)
+
+Run `ng serve`(or `npm start`) for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.</br>
 
 ## Code scaffolding
 
@@ -13,6 +17,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Deploy
+
+If you want boot the application on Firebase, deploy using `npm run deploy`.
 
 ## Running unit tests
 
