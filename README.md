@@ -10,6 +10,10 @@ This project use Firebase. You need to create "angular-chat" project, and Authen
 
 Run `ng serve`(or `npm start`) for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.</br>
 
+## Demo
+https://user-images.githubusercontent.com/102776020/176330101-e6e3bed8-fa67-49fc-95bc-02fc72397ff8.mp4
+https://user-images.githubusercontent.com/102776020/176330112-b64272b8-7dfd-4331-a433-4f400cb7f611.mp4
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
